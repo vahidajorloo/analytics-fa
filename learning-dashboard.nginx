@@ -1,0 +1,11 @@
+location /learning-analytics-dashboard/ {
+    alias /var/bigbluebutton/learning-dashboard/;
+    autoindex off;
+
+  proxy_set_header Accept-Encoding "";
+  sub_filter_types *;
+  sub_filter_once off;
+  sub_filter '</head>' '<link rel="stylesheet" type="text/css" href="/custom1.css"></head>';
+
+}
+

@@ -1,0 +1,13 @@
+        location /analytics {
+            auth_basic "Restricted Content";
+            auth_basic_user_file /etc/nginx/.htpasswd;
+            root /var/www/bigbluebutton-default/;
+
+
+          proxy_set_header Accept-Encoding "";
+          sub_filter_types *;
+          sub_filter_once off;
+          sub_filter '</head>' '<link rel="stylesheet" type="text/css" href="/custom1.css"></head>';
+
+        }
+
