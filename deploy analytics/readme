@@ -1,0 +1,12 @@
+
+module path: 
+/usr/lib/node_modules/bigbluebutton-analytics/
+
+dont forget to setup crontab:
+
+*/1 * * * * bbb-analytics --deploy
+
+dont forget to edit learning dashboard nginx file!
+
+
+
